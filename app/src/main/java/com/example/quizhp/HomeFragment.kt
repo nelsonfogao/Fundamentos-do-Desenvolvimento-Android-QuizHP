@@ -32,7 +32,7 @@ class HomeFragment : Fragment() {
                 Toast.makeText(requireActivity(),"Digite seu nome!", Toast.LENGTH_LONG).show()
             }else {
                 var nomeNovo = editTextNome.text.toString()
-                mainViewModel.alterarNome(nomeNovo)
+                mainViewModel.nome = nomeNovo
                 findNavController().navigate(R.id.pergunta1Fragment)
             }
         }
