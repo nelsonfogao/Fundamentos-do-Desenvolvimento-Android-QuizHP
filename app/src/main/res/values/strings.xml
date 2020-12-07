@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">QuizHP</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="background">fundo da tela</string>
+    <string name="logoharrypotter">Harry Potter</string>
+    <string name="logoquiz">Quiz</string>
+    <string name="nome">Digite seu nome</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="enviarperguntas">Próxima</string>
+    <string name="fotopergunta1">Foto de uma Horcrux</string>
+    <string name="pergunta1">1- Quantas horcruxes Voldemort fez?</string>
+    <string name="fotopergunta2">Foto de um dragão</string>
+    <string name="pergunta2">2- Qual dragão Harry lutou no “Cálice de fogo”?</string>
+    <string name="fotopergunta3">Foto do Harry Potter e da Gina</string>
+    <string name="pergunta3">3- Quais são os nomes dos filhos do Harry Potter com a Gina?</string>
+    <string name="fotopergunta4">Foto da Murta</string>
+    <string name="pergunta4">4- Qual o nome da aluna morta na primeira vez em que a câmara secreta foi aberta?</string>
+    <string name="fotopergunta5">Foto do Cornélio Fudge</string>
+    <string name="pergunta5">5- Quem é o sucessor do ministro Cornélio Fudge?</string>
+    <string name="fotopergunta6">Foto da Tonks e do Lupin</string>
+    <string name="pergunta6">6- Qual o nome do filho da Tonks com Lupin?</string>
+    <string name="fotopergunta7">Foto de um jogo do Harry Potter</string>
+    <string name="pergunta7">7- Qual desses feitiços surgiu nos videogames da franquia e o que ele faz?</string>
+    <string name="fotopergunta8">Foto do Dumbledore</string>
+    <string name="pergunta8">8- Qual o nome completo do Dumbledore?</string>
+    <string name="fotopergunta9">Foto do Argo Filch</string>
+    <string name="pergunta9">9- Por que Argo Filch, o zelador, não consegue fazer magia?</string>
+    <string name="fotopergunta10">Foto do Frei-Gorducho</string>
+    <string name="pergunta10">10- O Frei-Gorducho era fantasma de qual casa de Hogwarts?</string>
+
+
+
+</resources>
