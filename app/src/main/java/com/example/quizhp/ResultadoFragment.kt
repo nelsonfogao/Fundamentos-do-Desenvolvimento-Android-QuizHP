@@ -7,15 +7,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_resultado.*
 
 class ResultadoFragment : Fragment() {
+    private lateinit var rankingViewModel: RankingViewModel
     private lateinit var mainViewModel: MainViewModel
 
     override fun onCreateView(
@@ -25,7 +28,18 @@ class ResultadoFragment : Fragment() {
         // Inflate the layout for this fragment
         var view = inflater.inflate(R.layout.fragment_resultado, container, false)
         mainViewModel = ViewModelProvider(requireActivity(), ViewModelFactory()).get(MainViewModel::class.java)
+        rankingViewModel =
+                ViewModelProvider(
+                        this,
+                        RankingViewModelFactory(AppDatabase.getInstance())
+                )
+                        .get(RankingViewModel::class.java)
 
+        rankingViewModel.rankings
+                .observe(viewLifecycleOwner) {
+                    if (!it.isNullOrEmpty())
+                        adaptarListView(it)
+                }
         return view
     }
 
@@ -52,5 +66,11 @@ class ResultadoFragment : Fragment() {
                 textViewResultado.text = "Parabéns, você sabe tudo de HP, você é um bruxo de primeira!!"
             }
         }
+    }
+
+    private fun adaptarListView(listaDeRanking: List<Ranking>) {
+        listViewRanking.adapter =
+                RankingRecyclerAdapter(listaDeRanking)
+        listViewRanking.layoutManager = LinearLayoutManager(requireContext())
     }
 }

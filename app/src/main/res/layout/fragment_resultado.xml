@@ -78,4 +78,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewResultado" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listViewRanking"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWikia" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
