@@ -1,5 +1,6 @@
 package com.example.quizhp
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,7 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_pergunta1.*
+import kotlinx.android.synthetic.main.fragment_pergunta2.*
 import kotlinx.android.synthetic.main.fragment_pergunta3.*
 
 class Pergunta3Fragment : Fragment() {
@@ -25,8 +29,37 @@ class Pergunta3Fragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        buttonPergunta3.setOnClickListener{
-            findNavController().navigate(R.id.pergunta4Fragment)
+        buttonPergunta3.setOnClickListener {
+            if (radioGroupPergunta3.checkedRadioButtonId == -1) {
+                Snackbar.make(it, "Selecione uma opção!", Snackbar.LENGTH_SHORT).setTextColor(Color.WHITE)
+                        .setBackgroundTint(Color.RED)
+                        .show()
+            }else {
+                if (radioButtonPergunta3A.isChecked) {
+                    mainViewModel.respostaErrada()
+                    Snackbar.make(it, "Errou!!", Snackbar.LENGTH_SHORT).setTextColor(Color.WHITE)
+                            .setBackgroundTint(Color.RED)
+                            .show()
+                }
+                else if(radioButtonPergunta3B.isChecked) {
+                    mainViewModel.respostaCerta()
+                    Snackbar.make(it, "Acertou!!", Snackbar.LENGTH_SHORT).setTextColor(Color.WHITE)
+                            .setBackgroundTint(Color.GREEN)
+                            .show()
+                }
+                else if (radioButtonPergunta3C.isChecked){
+                    mainViewModel.respostaErrada()
+                    Snackbar.make(it, "Errou!!", Snackbar.LENGTH_SHORT).setTextColor(Color.WHITE)
+                            .setBackgroundTint(Color.RED)
+                            .show()
+                }else if(radioButtonPergunta3D.isChecked) {
+                    mainViewModel.respostaErrada()
+                    Snackbar.make(it, "Errou!!", Snackbar.LENGTH_SHORT).setTextColor(Color.WHITE)
+                            .setBackgroundTint(Color.RED)
+                            .show()
+                }
+                findNavController().navigate(R.id.pergunta4Fragment)
+            }
         }
     }
 }

@@ -18,7 +18,7 @@
         <ImageView
             android:id="@+id/imageViewPergunta8"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="300dp"
             android:contentDescription="@string/fotopergunta8"
             android:src="@drawable/pergunta8" />
 
@@ -37,28 +37,28 @@
             android:layout_height="match_parent">
 
             <RadioButton
-                android:id="@+id/radioButton29"
+                android:id="@+id/radioButtonPergunta8A"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/pergunta8a" />
 
             <RadioButton
-                android:id="@+id/radioButton30"
+                android:id="@+id/radioButtonPergunta8B"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/pergunta8b" />
 
             <RadioButton
-                android:id="@+id/radioButton31"
+                android:id="@+id/radioButtonPergunta8C"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/pergunta8c" />
 
             <RadioButton
-                android:id="@+id/radioButton32"
+                android:id="@+id/radioButtonPergunta8D"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/pergunta8d" />
         </RadioGroup>
 
         <Button

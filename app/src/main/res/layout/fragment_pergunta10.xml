@@ -37,28 +37,28 @@
             android:layout_height="match_parent">
 
             <RadioButton
-                android:id="@+id/radioButton37"
+                android:id="@+id/radioButtonPergunta10A"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/pergunta10a" />
 
             <RadioButton
-                android:id="@+id/radioButton38"
+                android:id="@+id/radioButtonPergunta10B"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/pergunta10b" />
 
             <RadioButton
-                android:id="@+id/radioButton39"
+                android:id="@+id/radioButtonPergunta10C"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/pergunta10c" />
 
             <RadioButton
-                android:id="@+id/radioButton40"
+                android:id="@+id/radioButtonPergunta10D"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RadioButton" />
+                android:text="@string/pergunta10d" />
         </RadioGroup>
 
         <Button

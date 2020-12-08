@@ -1,5 +1,6 @@
 package com.example.quizhp
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
@@ -29,10 +31,12 @@ class HomeFragment : Fragment() {
 
         buttonIniciar.setOnClickListener{
             if(editTextNome.text.isNullOrEmpty()){
-                Toast.makeText(requireActivity(),"Digite seu nome!", Toast.LENGTH_LONG).show()
+                Snackbar.make(it, "Digite seu nome!!", Snackbar.LENGTH_SHORT).setTextColor(Color.WHITE)
+                        .setBackgroundTint(Color.RED)
+                        .show()
             }else {
                 var nomeNovo = editTextNome.text.toString()
-                mainViewModel.nome = nomeNovo
+                mainViewModel.alteraNome(nomeNovo)
                 findNavController().navigate(R.id.pergunta1Fragment)
             }
         }
